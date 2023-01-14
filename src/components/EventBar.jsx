@@ -1,6 +1,13 @@
 import AddButton from "./AddButton";
 
 const EventBar = ({ events, setEvents }) => {
+  const handleAdd = () => {
+    const title = prompt("请输入事件名：");
+    if (title) {
+      setEvents((prev) => [...prev, { title: title }]);
+    }
+  };
+
   return (
     <div className="event-bar">
       <div className="event-bar-title">
@@ -8,7 +15,7 @@ const EventBar = ({ events, setEvents }) => {
         <span>点滴清单</span>
       </div>
       <div className="event-container">
-        <AddButton />
+        <AddButton handleClick={handleAdd} />
         {events.map((item) => (
           <div key={item.title} className="event over-hide">
             {item.title}
