@@ -41,6 +41,13 @@
   transition: 0.5s;
 }
 
+.selected-event {
+  color: var(--text-color-white);
+  background-color: var(--theme-color-blue);
+  border-color: var(--theme-color-blue);
+  transition: 0.5s;
+}
+
 .over-hide {
   overflow: hidden;
   text-overflow: ellipsis;
