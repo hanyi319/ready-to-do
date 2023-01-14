@@ -1,3 +1,12 @@
 :root {
+  --theme-color-blue: #0081fa;
+  --theme-color-green: #00d09c;
+  --theme-color-red: #ff585d;
+  --theme-color-yellow: #ffb61b;
+  --text-color-black: #1c2b33;
+  --text-color-white: #ffffff;
+  --text-color-muted: #7c7e8c;
   --border-color: #ededed;
+  --add-button-bg: #eaf1f0;
+  --add-button-hover-bg: #dfe2e2;
 }
