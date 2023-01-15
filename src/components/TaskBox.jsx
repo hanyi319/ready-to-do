@@ -1,3 +1,4 @@
+import { DragDropContext } from "react-beautiful-dnd";
 import Column from "./Column";
 
 const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
@@ -15,6 +16,12 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
       });
     }
   };
+  const handleDragEnd = (result) => {
+    if (!result.destination) return;
+    const { source, destination } = result;
+    // Remove from source
+    const taskCopy = currentEvent[source.droppableId][source.index];
+  };
 
   return (
     <div className="task-box">
@@ -24,16 +31,23 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           删除该事件
         </button>
       </header>
-      <div className="task-box-body">
-        <Column tag="to-do" events={events} setEvents={setEvents} currentEvent={currentEvent} />
-        <Column
-          tag="in-progress"
-          events={events}
-          setEvents={setEvents}
-          currentEvent={currentEvent}
-        />
-        <Column tag="completed" events={events} setEvents={setEvents} currentEvent={currentEvent} />
-      </div>
+      <DragDropContext onDragEnd={(result) => handleDragEnd(result)}>
+        <div className="task-box-body">
+          <Column tag="to-do" events={events} setEvents={setEvents} currentEvent={currentEvent} />
+          <Column
+            tag="in-progress"
+            events={events}
+            setEvents={setEvents}
+            currentEvent={currentEvent}
+          />
+          <Column
+            tag="completed"
+            events={events}
+            setEvents={setEvents}
+            currentEvent={currentEvent}
+          />
+        </div>
+      </DragDropContext>
     </div>
   );
 };
