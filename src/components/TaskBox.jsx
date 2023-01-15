@@ -2,9 +2,7 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleRemove = () => {
     if (confirm("是否确认删除该事件？")) {
       setEvents((prev) => {
-        const result = prev.filter((item) => {
-          item.title != currentEvent.title;
-        });
+        const result = prev.filter((item) => item.title != currentEvent.title);
         if (!result.length) {
           setEvents([{ title: "添加一项新事件", tasks: [] }]);
           setCurrentEvent({ title: "添加一项新事件", tasks: [] });
