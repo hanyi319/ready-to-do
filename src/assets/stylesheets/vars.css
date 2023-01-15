@@ -7,8 +7,10 @@
   --text-color-white: #ffffff;
   --text-color-muted: #7c7e8c;
   --border-color: #ededed;
+  --border-radius: 10px;
   --add-button-bg: #eaf1f0;
   --add-button-hover-bg: #dfe2e2;
   --event-button-bg: var(--theme-color-blue);
   --event-button-hover-bg: #77b8f7;
+  --task-column-bg: #f6f9fa;
 }

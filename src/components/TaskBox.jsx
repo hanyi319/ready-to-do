@@ -1,3 +1,5 @@
+import Column from "./Column";
+
 const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleRemove = () => {
     if (confirm("是否确认删除该事件？")) {
@@ -22,6 +24,11 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
           删除该事件
         </button>
       </header>
+      <div className="task-box-body">
+        <Column tag="待安排" />
+        <Column tag="进行中" />
+        <Column tag="已完成" />
+      </div>
     </div>
   );
 };
