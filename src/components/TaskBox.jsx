@@ -25,9 +25,14 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
         </button>
       </header>
       <div className="task-box-body">
-        <Column tag="待安排" />
-        <Column tag="进行中" />
-        <Column tag="已完成" />
+        <Column tag="to-do" events={events} setEvents={setEvents} currentEvent={currentEvent} />
+        <Column
+          tag="in-progress"
+          events={events}
+          setEvents={setEvents}
+          currentEvent={currentEvent}
+        />
+        <Column tag="completed" events={events} setEvents={setEvents} currentEvent={currentEvent} />
       </div>
     </div>
   );
