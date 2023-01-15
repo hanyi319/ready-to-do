@@ -83,11 +83,18 @@
   margin-bottom: 20px;
   border-radius: var(--border-radius);
   background-color: #fff;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.task:hover {
+  background-color: var(--add-button-hover-bg);
+  transition: 250ms;
 }
 
 .task-name {
   font-weight: 300;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 
 .task-name::before {
