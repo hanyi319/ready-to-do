@@ -7,11 +7,12 @@ import TaskBox from "./components/TaskBox";
 
 function App() {
   const [events, setEvents] = React.useState([
-    { title: "工作", tasks: {} },
-    { title: "学习", tasks: {} },
-    { title: "健身", tasks: {} },
+    { title: "工作", tasks: [] },
+    { title: "学习", tasks: [] },
+    { title: "健身", tasks: [] },
   ]);
   const [currentEvent, setCurrentEvent] = React.useState(events[0]);
+
   return (
     <div className="App">
       <EventBar
@@ -20,7 +21,12 @@ function App() {
         currentEvent={currentEvent}
         setCurrentEvent={setCurrentEvent}
       />
-      <TaskBox />
+      <TaskBox
+        events={events}
+        setEvents={setEvents}
+        currentEvent={currentEvent}
+        setCurrentEvent={setCurrentEvent}
+      />
     </div>
   );
 }
