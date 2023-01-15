@@ -9,4 +9,6 @@
   --border-color: #ededed;
   --add-button-bg: #eaf1f0;
   --add-button-hover-bg: #dfe2e2;
+  --event-button-bg: var(--theme-color-blue);
+  --event-button-hover-bg: #77b8f7;
 }

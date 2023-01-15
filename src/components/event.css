@@ -17,6 +17,7 @@
 .event-container {
   height: 850px;
   padding: 0 30px;
+  overflow: auto;
 }
 
 .event {
@@ -30,22 +31,22 @@
   font-size: 1.5em;
   font-weight: 500;
   color: var(--text-color-black);
-  transition: 0.5s;
+  transition: 250ms;
   cursor: pointer;
 }
 
 .event:hover {
   color: var(--text-color-white);
-  background-color: var(--theme-color-blue);
-  border-color: var(--theme-color-blue);
-  transition: 0.5s;
+  background-color: var(--event-button-hover-bg);
+  border-color: var(--event-button-hover-bg);
+  transition: 250ms;
 }
 
 .selected-event {
   color: var(--text-color-white);
-  background-color: var(--theme-color-blue);
-  border-color: var(--theme-color-blue);
-  transition: 0.5s;
+  background-color: var(--event-button-bg);
+  border-color: var(--event-button-bg);
+  transition: 250ms;
 }
 
 .over-hide {

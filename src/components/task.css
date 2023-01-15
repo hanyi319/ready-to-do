@@ -19,13 +19,14 @@
   font-size: 1.1em;
   color: var(--text-color-muted);
   background: none;
+  outline: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 250ms;
 }
 
 .remove-button:hover {
   color: var(--text-color-white);
   background-color: var(--theme-color-red);
   border-color: var(--theme-color-red);
-  transition: 0.5s;
+  transition: 250ms;
 }

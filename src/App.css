@@ -31,8 +31,9 @@
   font-weight: 500;
   color: var(--text-color-black);
   background-color: var(--add-button-bg);
+  outline: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 250ms;
 }
 
 .icon {
