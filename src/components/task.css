@@ -54,3 +54,20 @@
 .column:hover {
   outline: 2px solid var(--theme-color-blue);
 }
+
+.add-task-button {
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto 20px;
+  text-align: center;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: var(--add-button-bg);
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.add-task-button:hover {
+  background-color: var(--add-button-hover-bg);
+}

@@ -8,39 +8,17 @@
 .event-bar {
   flex-shrink: 0;
   width: 300px;
-  height: 100vh;
   text-align: center;
   border-right: 2px solid var(--border-color);
 }
 
 .task-box {
   flex-grow: 1;
-  min-width: 1000px;
-}
-
-.add-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 50px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  font-size: 2.5em;
-  font-weight: 500;
-  color: var(--text-color-black);
-  background-color: var(--add-button-bg);
-  outline: none;
-  cursor: pointer;
-  transition: 250ms;
+  min-width: 1080px;
+  background-color: var(--task-box-bg);
 }
 
 .icon {
   width: 0.7em;
   height: 0.7em;
-}
-
-.add-button:hover {
-  background-color: var(--add-button-hover-bg);
 }

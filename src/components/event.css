@@ -15,13 +15,12 @@
 }
 
 .event-container {
-  height: 850px;
   padding: 0 30px;
   overflow: auto;
 }
 
 .event {
-  max-width: 240px;
+  width: 240px;
   height: 50px;
   padding: 5px;
   margin-bottom: 20px;
@@ -53,4 +52,26 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.add-event-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--text-color-black);
+  background-color: var(--add-button-bg);
+  outline: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.add-event-button:hover {
+  background-color: var(--add-button-hover-bg);
 }

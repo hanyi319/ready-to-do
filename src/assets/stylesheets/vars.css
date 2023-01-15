@@ -6,9 +6,10 @@
   --text-color-black: #1c2b33;
   --text-color-white: #ffffff;
   --text-color-muted: #7c7e8c;
+  --task-box-bg: #fefefe;
   --border-color: #ededed;
   --border-radius: 10px;
-  --add-button-bg: #eaf1f0;
+  --add-button-bg: #eaf1f1;
   --add-button-hover-bg: #dfe2e2;
   --event-button-bg: var(--theme-color-blue);
   --event-button-hover-bg: #77b8f7;

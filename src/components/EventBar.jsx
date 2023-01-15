@@ -1,4 +1,4 @@
-import AddButton from "./AddButton";
+import AddEventButton from "./AddEventButton";
 
 const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleAdd = () => {
@@ -15,7 +15,7 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
         <span>点滴清单</span>
       </div>
       <div className="event-container">
-        <AddButton handleClick={handleAdd} />
+        <AddEventButton handleClick={handleAdd} />
         {events.map((item) => (
           <div
             key={item.title}
