@@ -18,9 +18,9 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   };
   const handleDragEnd = (result) => {
     if (!result.destination) return;
-    const { source, destination } = result;
-    // Remove from source
-    const taskCopy = currentEvent[source.droppableId][source.index];
+    // const { source, destination } = result;
+    // // Remove from source
+    // const taskCopy = currentEvent[source.droppableId][source.index];
   };
 
   return (
@@ -33,15 +33,15 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
       </header>
       <DragDropContext onDragEnd={(result) => handleDragEnd(result)}>
         <div className="task-box-body">
-          <Column tag="to-do" events={events} setEvents={setEvents} currentEvent={currentEvent} />
+          <Column tag="To Do" events={events} setEvents={setEvents} currentEvent={currentEvent} />
           <Column
-            tag="in-progress"
+            tag="In Progress"
             events={events}
             setEvents={setEvents}
             currentEvent={currentEvent}
           />
           <Column
-            tag="completed"
+            tag="Completed"
             events={events}
             setEvents={setEvents}
             currentEvent={currentEvent}

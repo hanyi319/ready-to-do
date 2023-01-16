@@ -4,7 +4,10 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleAdd = () => {
     const title = prompt("请输入事件名：");
     if (title) {
-      setEvents((prev) => [...prev, { title: title, tasks: [] }]);
+      setEvents((prev) => [
+        ...prev,
+        { title: title, ["To Do"]: [], ["In Progress"]: [], ["Completed"]: [] },
+      ]);
     }
   };
 

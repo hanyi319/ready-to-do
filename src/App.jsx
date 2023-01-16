@@ -10,70 +10,82 @@ function App() {
   const [events, setEvents] = React.useState([
     {
       title: "工作",
-      tasks: [
+      ["To Do"]: [
         {
-          name: "Something",
+          name: "测试任务 1",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "to-do",
+          details: "这是一段测试用的文本。",
+          state: "To Do",
         },
+      ],
+      ["In Progress"]: [
         {
-          name: "Something",
+          name: "测试任务 2",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "in-progress",
+          details: "这是一段测试用的文本。",
+          state: "In Progress",
         },
+      ],
+      ["Completed"]: [
         {
-          name: "Something",
+          name: "测试任务 3",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "completed",
+          details: "这是一段测试用的文本。",
+          state: "Completed",
         },
       ],
     },
     {
       title: "学习",
-      tasks: [
+      ["To Do"]: [
         {
-          name: "Something",
+          name: "测试任务 1",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "to-do",
+          details: "这是一段测试用的文本。",
+          state: "To Do",
         },
+      ],
+      ["In Progress"]: [
         {
-          name: "Something",
+          name: "测试任务 2",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "in-progress",
+          details: "这是一段测试用的文本。",
+          state: "In Progress",
         },
+      ],
+      ["Completed"]: [
         {
-          name: "Something",
+          name: "测试任务 3",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "completed",
+          details: "这是一段测试用的文本。",
+          state: "Completed",
         },
       ],
     },
     {
       title: "健身",
-      tasks: [
+      ["To Do"]: [
         {
-          name: "Something",
+          name: "测试任务 1",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "to-do",
+          details: "这是一段测试用的文本。",
+          state: "To Do",
         },
+      ],
+      ["In Progress"]: [
         {
-          name: "Something",
+          name: "测试任务 2",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "in-progress",
+          details: "这是一段测试用的文本。",
+          state: "In Progress",
         },
+      ],
+      ["Completed"]: [
         {
-          name: "Something",
+          name: "测试任务 3",
           id: uuid(),
-          details: "SomethingSomethingSomething",
-          state: "completed",
+          details: "这是一段测试用的文本。",
+          state: "Completed",
         },
       ],
     },
