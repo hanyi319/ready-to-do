@@ -18,9 +18,34 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   };
   const handleDragEnd = (result) => {
     if (!result.destination) return;
-    // const { source, destination } = result;
-    // // Remove from source
-    // const taskCopy = currentEvent[source.droppableId][source.index];
+    const { source, destination } = result;
+    const taskCopy = currentEvent[source.droppableId][source.index];
+
+    // 从原来的任务栏删除选中任务
+    setEvents((prev) =>
+      prev.map((event) => {
+        if (event.title === currentEvent.title) {
+          const taskList = event[source.droppableId];
+          taskList.splice(source.index, 1);
+          return { ...event, [source.droppableId]: taskList };
+        } else {
+          return event;
+        }
+      })
+    );
+
+    // 将选中任务添加到新的任务栏
+    setEvents((prev) =>
+      prev.map((event) => {
+        if (event.title === currentEvent.title) {
+          const taskList = event[destination.droppableId];
+          taskList.splice(destination.index, 0, taskCopy);
+          return { ...event, [destination.droppableId]: taskList };
+        } else {
+          return event;
+        }
+      })
+    );
   };
 
   return (
