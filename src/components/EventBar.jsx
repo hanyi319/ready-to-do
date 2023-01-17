@@ -3,6 +3,12 @@ import AddEventButton from "./AddEventButton";
 const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleAdd = () => {
     const title = prompt("请输入事件名：");
+
+    // 阻止事件重复
+    if (events.find((event) => event.title.toLowerCase() === title.toLowerCase())) {
+      alert("事件已存在");
+      return;
+    }
     if (title) {
       setEvents((prev) => [
         ...prev,
