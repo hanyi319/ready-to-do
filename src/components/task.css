@@ -48,6 +48,7 @@
   font-size: 1.4em;
   font-weight: 500;
   background-color: var(--task-column-bg);
+  transition: 250ms;
 }
 
 .column:hover {
@@ -73,6 +74,7 @@
 
 .task-container {
   width: 100%;
+  min-height: 30px;
   max-height: 600px;
   overflow: auto;
 }
