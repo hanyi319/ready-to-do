@@ -30,7 +30,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
             <div className="task-container" ref={provided.innerRef} {...provided.droppableProps}>
               {events
                 .find((event) => event.title === currentEvent.title)
-                [tag].map((item, index) => {
+                ?.[tag].map((item, index) => {
                   return (
                     <Draggable key={item.id} draggableId={item.id} index={index}>
                       {(provided, snapshot) => {
