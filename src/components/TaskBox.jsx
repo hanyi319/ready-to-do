@@ -57,8 +57,10 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
     );
   };
 
+  let screenWidth = window.screen.width - 300;
+
   return (
-    <div className="task-box">
+    <div className="task-box" style={{ width: screenWidth }}>
       <header className="task-box-header">
         <h1 className="task-box-title">所有任务</h1>
         <button className="remove-button" onClick={handleRemove}>

@@ -5,19 +5,6 @@
   display: flex;
 }
 
-.event-bar {
-  flex-shrink: 0;
-  width: 300px;
-  text-align: center;
-  border-right: 2px solid var(--border-color);
-}
-
-.task-box {
-  flex-grow: 1;
-  min-width: 1080px;
-  background-color: var(--task-box-bg);
-}
-
 .icon {
   width: 0.7em;
   height: 0.7em;

@@ -12,21 +12,21 @@ function App() {
       title: "工作",
       ["To Do"]: [
         {
-          name: "测试任务 1",
+          name: "工作任务 1",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
       ],
       ["In Progress"]: [
         {
-          name: "测试任务 2",
+          name: "工作任务 2",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
       ],
       ["Completed"]: [
         {
-          name: "测试任务 3",
+          name: "工作任务 3",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
@@ -36,21 +36,21 @@ function App() {
       title: "学习",
       ["To Do"]: [
         {
-          name: "测试任务 1",
+          name: "学习任务 1",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
       ],
       ["In Progress"]: [
         {
-          name: "测试任务 2",
+          name: "学习任务 2",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
       ],
       ["Completed"]: [
         {
-          name: "测试任务 3",
+          name: "学习任务 3",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
@@ -60,21 +60,21 @@ function App() {
       title: "健身",
       ["To Do"]: [
         {
-          name: "测试任务 1",
+          name: "健身任务 1",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
       ],
       ["In Progress"]: [
         {
-          name: "测试任务 2",
+          name: "健身任务 2",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },
       ],
       ["Completed"]: [
         {
-          name: "测试任务 3",
+          name: "健身任务 3",
           id: uuid(),
           details: "这是一段测试用的文本。",
         },

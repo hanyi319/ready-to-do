@@ -22,7 +22,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
 
   return (
     <div className="column">
-      {tag}
+      <div className="column-title">{tag}</div>
       <AddTaskButton handleClick={handleAdd} />
       <Droppable droppableId={tag}>
         {(provided, snapshot) => {

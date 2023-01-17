@@ -1,14 +1,17 @@
+.task-box {
+  flex-grow: 1;
+  background-color: var(--task-box-bg);
+}
+
 .task-box-header {
   display: flex;
   align-items: center;
-  padding: 0 50px;
-  margin-top: 22px;
+  padding: 45px;
 }
 
 .task-box-title {
-  padding: 25px 0;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .remove-button {
@@ -22,12 +25,18 @@
   outline: none;
   cursor: pointer;
   transition: 250ms;
+  transition: transform 0.2s cubic-bezier(0.68, 0.01, 0.62, 0.6), opacity 0.08s linear;
+}
+
+.remove-button:active {
+  transform: scale(0.95);
+  opacity: 0.5;
 }
 
 .remove-button:hover {
   color: var(--text-color-white);
   background-color: var(--theme-color-red);
-  border-color: var(--theme-color-red);
+  border: 2px solid var(--theme-color-red);
   transition: 250ms;
 }
 
@@ -37,13 +46,13 @@
   align-items: flex-start;
   width: 100%;
   height: 700px;
-  margin-top: 20px;
 }
 
 .column {
-  width: 300px;
+  width: calc(100% / 3);
+  max-width: 300px;
   max-height: 700px;
-  padding: 17px 25px;
+  margin: 8px;
   border-radius: var(--border-radius);
   font-size: 1.4em;
   font-weight: 500;
@@ -52,24 +61,38 @@
 }
 
 .column:hover {
-  outline: 2px solid var(--theme-color-blue);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column-title {
+  text-align: center;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: 16px;
+  background-color: var(--task-column-title-bg);
+  user-select: none;
 }
 
 .add-task-button {
-  width: 250px;
   height: 40px;
   line-height: 40px;
-  margin: 10px auto 20px;
+  margin: 20px 16px 20px;
   text-align: center;
   outline: none;
   border-radius: var(--border-radius);
-  background-color: var(--add-button-bg);
+  background-color: var(--add-task-button-bg);
   cursor: pointer;
+  user-select: none;
   transition: 250ms;
+  transition: transform 0.2s cubic-bezier(0.68, 0.01, 0.62, 0.6), opacity 0.08s linear;
+}
+
+.add-task-button:active {
+  transform: scale(0.95);
+  opacity: 0.5;
 }
 
 .add-task-button:hover {
-  background-color: var(--add-button-hover-bg);
+  background-color: var(--add-task-button-hover-bg);
 }
 
 .task-container {
@@ -80,12 +103,11 @@
 }
 
 .task {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 0 16px 16px;
+  border: 2px solid var(--task-border-color);
   border-radius: var(--border-radius);
-  background-color: #fff;
+  background-color: var(--task-bg);
   cursor: pointer;
   outline: none;
   user-select: none;
@@ -93,11 +115,12 @@
 }
 
 .task:hover {
-  background-color: var(--add-button-hover-bg);
+  background-color: var(--task-hover-bg);
   transition: 250ms;
 }
 
 .task-name {
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.5em;
 }

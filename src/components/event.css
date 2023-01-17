@@ -1,8 +1,15 @@
+.event-bar {
+  flex-shrink: 0;
+  width: 300px;
+  text-align: center;
+  background-color: var(--event-bar-bg);
+}
+
 .event-bar-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px 0;
+  padding: 50px 0;
   font-size: 2em;
   font-weight: 600;
   color: var(--text-color-black);
@@ -19,41 +26,6 @@
   overflow: auto;
 }
 
-.event {
-  width: 240px;
-  height: 50px;
-  padding: 5px;
-  margin-bottom: 20px;
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  line-height: 1.5em;
-  font-size: 1.5em;
-  font-weight: 500;
-  color: var(--text-color-black);
-  transition: 250ms;
-  cursor: pointer;
-}
-
-.event:hover {
-  color: var(--text-color-white);
-  background-color: var(--event-button-hover-bg);
-  border-color: var(--event-button-hover-bg);
-  transition: 250ms;
-}
-
-.selected-event {
-  color: var(--text-color-white);
-  background-color: var(--event-button-bg);
-  border-color: var(--event-button-bg);
-  transition: 250ms;
-}
-
-.over-hide {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .add-event-button {
   display: flex;
   flex-direction: column;
@@ -66,12 +38,59 @@
   font-size: 2.5em;
   font-weight: 500;
   color: var(--text-color-black);
-  background-color: var(--add-button-bg);
+  background-color: var(--add-event-button-bg);
   outline: none;
   cursor: pointer;
+  user-select: none;
   transition: 250ms;
+  transition: transform 0.2s cubic-bezier(0.68, 0.01, 0.62, 0.6), opacity 0.08s linear;
 }
 
 .add-event-button:hover {
-  background-color: var(--add-button-hover-bg);
+  background-color: var(--add-event-button-hover-bg);
+}
+
+.add-event-button:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+}
+
+.event {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--text-color-black);
+  background-color: var(--event-button-default-bg);
+  transition: 250ms;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s cubic-bezier(0.68, 0.01, 0.62, 0.6), opacity 0.08s linear;
+}
+
+.event:active {
+  transform: scale(0.95);
+  opacity: 0.5;
+}
+
+.event:hover:not(.selected-event) {
+  color: var(--text-color-white);
+  background-color: var(--event-button-hover-bg);
+  transition: 250ms;
+}
+
+.selected-event {
+  color: var(--text-color-white);
+  background-color: var(--event-button-selected-bg);
+  transition: 250ms;
+}
+
+.over-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
