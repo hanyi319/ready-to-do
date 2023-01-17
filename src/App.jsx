@@ -15,7 +15,6 @@ function App() {
           name: "测试任务 1",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "To Do",
         },
       ],
       ["In Progress"]: [
@@ -23,7 +22,6 @@ function App() {
           name: "测试任务 2",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "In Progress",
         },
       ],
       ["Completed"]: [
@@ -31,7 +29,6 @@ function App() {
           name: "测试任务 3",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "Completed",
         },
       ],
     },
@@ -42,7 +39,6 @@ function App() {
           name: "测试任务 1",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "To Do",
         },
       ],
       ["In Progress"]: [
@@ -50,7 +46,6 @@ function App() {
           name: "测试任务 2",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "In Progress",
         },
       ],
       ["Completed"]: [
@@ -58,7 +53,6 @@ function App() {
           name: "测试任务 3",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "Completed",
         },
       ],
     },
@@ -69,7 +63,6 @@ function App() {
           name: "测试任务 1",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "To Do",
         },
       ],
       ["In Progress"]: [
@@ -77,7 +70,6 @@ function App() {
           name: "测试任务 2",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "In Progress",
         },
       ],
       ["Completed"]: [
@@ -85,7 +77,6 @@ function App() {
           name: "测试任务 3",
           id: uuid(),
           details: "这是一段测试用的文本。",
-          state: "Completed",
         },
       ],
     },

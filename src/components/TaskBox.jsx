@@ -27,7 +27,8 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleDragEnd = (result) => {
     if (!result.destination) return;
     const { source, destination } = result;
-    const taskCopy = currentEvent[source.droppableId][source.index];
+    const curEvent = events.find((item) => item.title === currentEvent.title);
+    const taskCopy = curEvent[source.droppableId][source.index];
 
     // 从原来的任务栏删除选中任务
     setEvents((prev) =>

@@ -14,7 +14,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
       const eventCopy = arrCopy[index];
       arrCopy.splice(index, 1, {
         ...eventCopy,
-        [tag]: [...eventCopy[tag], { name: name, id: uuid(), details: details, state: tag }],
+        [tag]: [...eventCopy[tag], { name: name, id: uuid(), details: details }],
       });
       return arrCopy;
     });
