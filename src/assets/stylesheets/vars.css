@@ -24,4 +24,6 @@
   --task-border-color: #ccc;
   --task-bg: #fff;
   --task-hover-bg: rgba(0, 119, 256, 0.014);
+  --remove-bar-color: #888;
+  --remove-bar-hover-color: var(--theme-color-red);
 }
