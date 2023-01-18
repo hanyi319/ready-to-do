@@ -103,6 +103,7 @@
 }
 
 .task {
+  position: relative;
   padding: 16px;
   margin: 0 16px 16px;
   border: 2px solid var(--task-border-color);
@@ -128,7 +129,7 @@
 .task-name::before {
   content: "●";
   margin-right: 10px;
-  color: var(--theme-color-blue);
+  color: var(--theme-color-green);
 }
 
 .task-details {
@@ -141,16 +142,21 @@
 }
 
 .remove-bar {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   text-align: end;
   font-size: 3.5em;
   font-weight: 300;
   font-style: italic;
+  line-height: 0.1em;
   color: var(--remove-bar-color);
   transition: 250ms;
 }
 
 .remove-bar:hover {
-  font-size: 9em;
+  font-size: 8em;
+  line-height: 0.2em;
   color: var(--remove-bar-hover-color);
   transition: 250ms;
 }

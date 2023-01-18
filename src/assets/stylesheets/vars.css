@@ -11,19 +11,19 @@
   --border-color: #ededed;
   --border-radius: 10px;
   --event-bar-bg: #e5e8ed;
-  --add-event-button-bg: var(--theme-color-green);
-  --add-event-button-hover-bg: #73dcc5;
+  --add-event-button-bg: #d9dce0;
+  --add-event-button-hover-bg: #dfe2e2;
   --event-button-default-bg: #d9dce0;
   --event-button-selected-bg: var(--theme-color-blue);
   --event-button-hover-bg: #77b8f7;
   --task-box-bg: #edeff3;
   --task-column-bg: #ffffff;
   --task-column-title-bg: #f6f7f9;
-  --add-task-button-bg: var(--theme-color-green);
-  --add-task-button-hover-bg: #73dcc5;
+  --add-task-button-bg: #eff0f0;
+  --add-task-button-hover-bg: #e7e9e8;
   --task-border-color: #ccc;
   --task-bg: #fff;
-  --task-hover-bg: rgba(0, 119, 256, 0.014);
+  --task-hover-bg: #f2f5ff;
   --remove-bar-color: #888;
   --remove-bar-hover-color: var(--theme-color-red);
 }

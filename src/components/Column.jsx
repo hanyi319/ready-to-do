@@ -4,6 +4,12 @@ import AddTaskButton from "./AddTaskButton";
 import Task from "./Task";
 
 const Column = ({ tag, currentEvent, events, setEvents }) => {
+  const title = {
+    "To Do": "⏳待安排",
+    "In Progress": "🔥进行中",
+    Completed: "🎯已完成",
+  };
+
   const handleAdd = () => {
     const name = prompt("请输入任务名：");
     const details = prompt("请输入详细信息：");
@@ -36,7 +42,7 @@ const Column = ({ tag, currentEvent, events, setEvents }) => {
 
   return (
     <div className="column">
-      <div className="column-title">{tag}</div>
+      <div className="column-title">{title[tag]}</div>
       <AddTaskButton handleClick={handleAdd} />
       <Droppable droppableId={tag}>
         {(provided, snapshot) => {
