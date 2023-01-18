@@ -1,4 +1,5 @@
 import AddEventButton from "./AddEventButton";
+import logo from "/src/assets/icons/logo.svg";
 
 const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   const handleAdd = () => {
@@ -20,7 +21,7 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
   return (
     <div className="event-bar">
       <div className="event-bar-title">
-        <img src="src/assets/icons/logo.svg" alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
         <span>点滴清单</span>
       </div>
       <div className="event-container">
