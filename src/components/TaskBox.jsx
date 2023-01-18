@@ -30,26 +30,21 @@ const TaskBox = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
     const curEvent = events.find((item) => item.title === currentEvent.title);
     const taskCopy = curEvent[source.droppableId][source.index];
 
-    // 从原来的任务栏删除选中任务
     setEvents((prev) =>
       prev.map((event) => {
         if (event.title === currentEvent.title) {
-          const taskList = event[source.droppableId];
-          taskList.splice(source.index, 1);
-          return { ...event, [source.droppableId]: taskList };
-        } else {
-          return event;
-        }
-      })
-    );
+          let eventCopy = { ...event };
 
-    // 将选中任务添加到新的任务栏
-    setEvents((prev) =>
-      prev.map((event) => {
-        if (event.title === currentEvent.title) {
-          const taskList = event[destination.droppableId];
-          taskList.splice(destination.index, 0, taskCopy);
-          return { ...event, [destination.droppableId]: taskList };
+          // 从原来的任务栏删除选中任务
+          const taskListSource = event[source.droppableId];
+          taskListSource.splice(source.index, 1);
+          eventCopy = { ...event, [source.droppableId]: taskListSource };
+
+          // 将选中任务添加到新的任务栏
+          const taskListDes = event[destination.droppableId];
+          taskListDes.splice(destination.index, 0, taskCopy);
+          eventCopy = { ...event, [destination.droppableId]: taskListDes };
+          return eventCopy;
         } else {
           return event;
         }
