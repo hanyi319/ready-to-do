@@ -1,8 +1,9 @@
+import { useCallback } from "react";
 import AddEventButton from "./AddEventButton";
 import logo from "/src/assets/icons/logo.svg";
 
 const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
-  const handleAdd = () => {
+  const handleAdd = useCallback(() => {
     const title = prompt("请输入事件名：");
 
     // 阻止事件重复
@@ -10,13 +11,15 @@ const EventBar = ({ events, setEvents, currentEvent, setCurrentEvent }) => {
       alert("事件已存在");
       return;
     }
+
+    // 添加新事件
     if (title) {
       setEvents((prev) => [
         ...prev,
         { title: title, ["To Do"]: [], ["In Progress"]: [], ["Completed"]: [] },
       ]);
     }
-  };
+  }, [events, setEvents]);
 
   return (
     <div className="event-bar">
